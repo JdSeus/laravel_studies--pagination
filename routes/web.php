@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+use App\Http\Controllers\ClienteControlador;
+
+Route::get('/', [ClienteControlador::class, 'index']);
