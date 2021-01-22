@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ClienteControlador;
 
-Route::get('/', [ClienteControlador::class, 'index']);
+//Route::get('/', [ClienteControlador::class, 'index']);
+Route::get('/', [ClienteControlador::class, 'indexjs']);
+Route::get('/json', [ClienteControlador::class, 'indexjson']);
