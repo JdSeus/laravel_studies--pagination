@@ -17,6 +17,9 @@
             <div class="card text-center">
                 <div class="card-header">Tabela de cliente</div>
                 <div class="card-body">
+                    <h5 class="card-title" id="cardTitle">
+
+                    </h5>
                     <table class="table table-hover" id="tabelaClientes">
                         <thead>
                             <th scope="col">#</th>
@@ -37,19 +40,7 @@
                 <div class="card-footer">
                     <nav id="paginator">
                         <ul class="pagination">
-                            <!--
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
-                        -->
+                            
                         </ul>
                       </nav>
                 </div>
@@ -145,6 +136,12 @@
                     $("#paginator>ul>li>a").click(function() {
                         carregarClientes($(this).attr('pagina'));
                     });
+                    $("#cardTitle").html("Exibindo " + resp.per_page +
+                    " clientes de " + resp.total +
+                    " ( " + resp.from +
+                    " a " + resp.to +
+                    " )"
+                     );
                 });
             }
 
